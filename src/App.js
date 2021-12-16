@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Netlify
+          Netlify.
         </a>
       </footer>
     </div>

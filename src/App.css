@@ -6,3 +6,9 @@
 footer {
   margin-top: 10em;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
