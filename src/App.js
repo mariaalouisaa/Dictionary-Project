@@ -7,7 +7,15 @@ function App() {
       <h1>Dictionary</h1>
       <Search />
       <footer>
-        Coded by Maria Castro hosted on{" "}
+        Open source code on{" "}
+        <a
+          href="https://github.com/mariaalouisaa/Dictionary-Project"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        , site hosted on{" "}
         <a
           href="https://practical-poincare-037e95.netlify.app"
           target="_blank"

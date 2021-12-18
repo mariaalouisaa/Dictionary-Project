@@ -2,4 +2,18 @@
   font-size: smaller;
   font-weight: normal;
   margin-left: 15px;
+  color: rgb(80, 80, 80);
+}
+
+.sound {
+  color: rgb(80, 80, 80);
+  font-size: smaller;
+  margin-right: 20px;
+  border: solid rgb(80, 80, 80);
+  padding: 3px 4px;
+  border-radius: 20px;
+}
+
+.sound:hover {
+  background: rgba(182, 182, 182, 0.5);
 }
