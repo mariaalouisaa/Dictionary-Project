@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Definitions from "./Definition";
 
 export default function Search() {
   const [keyword, setKeyword] = useState("");
+  const [result, setResult] = useState(null);
   function handleSearch(event) {
     event.preventDefault();
     // API Documentation - https://dictionaryapi.dev/
@@ -11,7 +13,7 @@ export default function Search() {
   }
 
   function handleResponse(response) {
-    console.log(response.data[0]);
+    setResult(response.data[0]);
   }
 
   function updateCity(event) {
@@ -23,6 +25,7 @@ export default function Search() {
       <form onSubmit={handleSearch}>
         <input type="search" onChange={updateCity} />
         <input type="submit" value="SEARCH" />
+        <Definitions data={result} />
       </form>
     </div>
   );
