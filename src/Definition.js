@@ -1,10 +1,15 @@
+import "./Definition.css";
+
 export default function Definitions(props) {
   if (props.data) {
+    console.log(props.data.phonetic);
     return (
       <div className="Definitions">
-        <h2>{props.data.word}</h2>
+        <h2>
+          {props.data.word}{" "}
+          <span className="phonetic"> {props.data.phonetic}</span>
+        </h2>
         {props.data.meanings.map(function (meaning, index) {
-          console.log(meaning.definitions[0].definition);
           return (
             <p key={index}>
               <strong>
