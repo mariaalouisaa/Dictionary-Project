@@ -1,6 +1,10 @@
 import "./Synonym.css";
 
 export default function Synonym(props) {
+  function searchSynonym() {
+    console.log("clicked");
+  }
+
   if (props.synonyms.length > 0) {
     return (
       <div className="Synonym">
@@ -9,11 +13,11 @@ export default function Synonym(props) {
         </span>
         <br />
         {props.synonyms.map((word, index) => {
-          if (index < 14) {
+          if (index < 10) {
             return (
-              <span key={index} className="synonym">
+              <button key={index} className="synonym" onClick={searchSynonym}>
                 {word}
-              </span>
+              </button>
             );
           } else return null;
         })}

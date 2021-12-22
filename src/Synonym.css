@@ -1,3 +1,11 @@
 .synonym {
-  padding-right: 25px;
+  padding: 5px 10px;
+  margin: 5px;
+  border: #505050 solid 2px;
+  border-radius: 20px;
+  background: none;
+}
+
+.synonym:hover {
+  background: rgba(182, 182, 182, 0.5);
 }

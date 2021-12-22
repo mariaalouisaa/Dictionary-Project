@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Definitions from "./Definition";
+import "./Search.css";
 
 export default function Search() {
   const [keyword, setKeyword] = useState("");
@@ -23,8 +24,8 @@ export default function Search() {
   return (
     <div className="Search">
       <form onSubmit={handleSearch}>
-        <input type="search" onChange={updateCity} />
-        <input type="submit" value="SEARCH" />
+        <input className="input" type="search" onChange={updateCity} />
+        <input className="submit" type="submit" value="GO" />
         <Definitions data={result} />
       </form>
     </div>

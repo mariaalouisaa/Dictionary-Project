@@ -3,7 +3,6 @@ import Example from "./Example";
 import "./Definition.css";
 
 export default function Definitions(props) {
-  console.log(props.data);
   if (props.data) {
     let audio = new Audio(props.data.phonetics[0].audio);
 
@@ -15,7 +14,7 @@ export default function Definitions(props) {
       <div className="Definitions">
         <h2>
           <span className="sound" onClick={play}>
-            <i className="fas fa-volume-up"></i>
+            <i class="fas fa-volume-up"></i>
           </span>
           {props.data.word}{" "}
           <span className="phonetic"> {props.data.phonetic}</span>
