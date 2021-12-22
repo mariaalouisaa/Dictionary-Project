@@ -17,3 +17,11 @@
 .sound:hover {
   background: rgba(182, 182, 182, 0.5);
 }
+
+.definition-text {
+  line-height: 22px;
+}
+.part-text {
+  font-size: 1.5em;
+  line-height: 1.6em;
+}
