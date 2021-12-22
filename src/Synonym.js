@@ -15,7 +15,7 @@ export default function Synonym(props) {
                 {word}
               </span>
             );
-          }
+          } else return null;
         })}
       </div>
     );
