@@ -10,11 +10,13 @@ export default function Synonym(props) {
         </span>
         <br />
         {props.synonyms.map((word, index) => {
-          return (
-            <span key={index} className="synonym">
-              {word}
-            </span>
-          );
+          if (index < 15) {
+            return (
+              <span key={index} className="synonym">
+                {word}
+              </span>
+            );
+          }
         })}
       </div>
     );
