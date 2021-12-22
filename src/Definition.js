@@ -1,4 +1,5 @@
 import Synonym from "./Synonym";
+import Example from "./Example";
 import "./Definition.css";
 
 export default function Definitions(props) {
@@ -27,8 +28,7 @@ export default function Definitions(props) {
               <strong> Defintion: </strong>
               {meaning.definitions[0].definition}
               <br />
-              <strong> Example: </strong>
-              {meaning.definitions[0].example}.
+              <Example example={meaning.definitions[0].example} />
               <Synonym synonyms={meaning.definitions[0].synonyms} />
             </div>
           );

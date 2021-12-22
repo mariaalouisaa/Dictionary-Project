@@ -1,7 +1,6 @@
 import "./Synonym.css";
 
 export default function Synonym(props) {
-  console.log(props.synonyms.length);
   if (props.synonyms.length > 0) {
     return (
       <div className="Synonym">
@@ -10,7 +9,7 @@ export default function Synonym(props) {
         </span>
         <br />
         {props.synonyms.map((word, index) => {
-          if (index < 15) {
+          if (index < 14) {
             return (
               <span key={index} className="synonym">
                 {word}
