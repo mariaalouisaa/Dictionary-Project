@@ -8,14 +8,16 @@ export default function Synonym(props) {
   if (props.synonyms.length > 0) {
     return (
       <div className="Synonym">
-        <span>
-          <strong>Synonyms:</strong>
-        </span>
+        <p className="sub-title">Synonyms:</p>
         <br />
         {props.synonyms.map((word, index) => {
           if (index < 10) {
             return (
-              <button key={index} className="synonym" onClick={searchSynonym}>
+              <button
+                key={index}
+                className="synonym-word"
+                onClick={searchSynonym}
+              >
                 {word}
               </button>
             );

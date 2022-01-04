@@ -1,4 +1,11 @@
-.synonym {
+.sub-title {
+  margin: 5px auto;
+  font-weight: bold;
+}
+
+.synonym-word {
+  position: relative;
+  top: -15px;
   padding: 5px 10px;
   margin: 5px;
   border: #505050 solid 2px;
@@ -6,6 +13,6 @@
   background: none;
 }
 
-.synonym:hover {
+.synonym-word:hover {
   background: rgba(182, 182, 182, 0.5);
 }
