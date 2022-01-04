@@ -1,10 +1,11 @@
 .App {
   font-family: "Roboto", sans-serif;
-  margin: 6em 4em;
+  margin: 6em 4em 0 4em;
 }
 
 footer {
-  margin-top: 10em;
+  margin-top: 5em;
+  font-size: smaller;
 }
 
 a {

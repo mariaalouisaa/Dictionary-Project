@@ -34,5 +34,5 @@ export default function Definitions(props) {
         })}
       </div>
     );
-  } else return null;
+  } else return <div className="holder"></div>;
 }
