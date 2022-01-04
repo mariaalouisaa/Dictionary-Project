@@ -24,10 +24,12 @@ export default function Definitions(props) {
             <section className="definition-text" key={index}>
               <span className="part-text">{meaning.partOfSpeech}</span>
               <br />
-              <strong> Defintion: </strong>
-              {meaning.definitions[0].definition}
+              <span className="deff-text">
+                {meaning.definitions[0].definition}
+              </span>
               <br />
               <Example example={meaning.definitions[0].example} />
+              <br />
               <Synonym synonyms={meaning.definitions[0].synonyms} />
             </section>
           );

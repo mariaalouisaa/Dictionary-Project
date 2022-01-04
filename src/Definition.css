@@ -5,6 +5,9 @@ section {
   padding: 10px;
 }
 
+h2 {
+  font-size: 26px;
+}
 .phonetic {
   font-size: smaller;
   font-weight: normal;
@@ -15,7 +18,7 @@ section {
 .sound {
   color: rgb(80, 80, 80);
   font-size: smaller;
-  margin-right: 20px;
+  margin: auto 20px auto 10px;
   border: solid rgb(80, 80, 80);
   padding: 3px 4px;
   border-radius: 20px;
@@ -26,14 +29,19 @@ section {
 }
 
 .definition-text {
-  line-height: 22px;
+  line-height: 1.5;
 }
 
 .part-text {
   font-size: 1.5em;
-  line-height: 1.6em;
+  line-height: 1.5;
 }
 
+.example {
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 14px;
+}
 .holder {
   height: 50vh;
 }

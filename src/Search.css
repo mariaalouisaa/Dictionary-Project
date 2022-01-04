@@ -1,14 +1,6 @@
 .input {
-  padding: 5px;
-  width: 20em;
-}
-
-.submit {
-  padding: 10px;
-  margin-left: 15px;
-  border-radius: 50px;
-  background: blueviolet;
-  border: none;
-  color: white;
-  font-weight: bold;
+  padding: 8px;
+  width: 100%;
+  border-radius: 10px;
+  border: black 1px solid;
 }

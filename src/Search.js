@@ -25,9 +25,9 @@ export default function Search() {
     <div className="Search">
       <form onSubmit={handleSearch}>
         <input className="input" type="search" onChange={updateCity} />
-        <input className="submit" type="submit" value="GO" />
-        <Definitions data={result} />
       </form>
+
+      <Definitions data={result} />
     </div>
   );
 }
