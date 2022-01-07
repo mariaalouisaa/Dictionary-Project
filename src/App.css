@@ -1,6 +1,10 @@
+body {
+  margin: 0;
+}
 .App {
   font-family: "Roboto", sans-serif;
-  margin: 6em 4em 0 4em;
+  padding: 6em 4em 0 4em;
+  background-color: rgb(131, 213, 216, 0.1);
 }
 
 footer {
