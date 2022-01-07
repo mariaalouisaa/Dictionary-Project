@@ -11,6 +11,14 @@ export default function Search() {
     // API Documentation - https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+    let pexelsKey = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let header = { Authorization: `Bearer ${pexelsKey}` };
+    axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
+  }
+
+  function handlePexelsResponse(response) {
+    console.log(response);
   }
 
   function handleResponse(response) {
@@ -26,7 +34,6 @@ export default function Search() {
       <form onSubmit={handleSearch}>
         <input className="input" type="search" onChange={updateCity} />
       </form>
-
       <Definitions data={result} />
     </div>
   );
