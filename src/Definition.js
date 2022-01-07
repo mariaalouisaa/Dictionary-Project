@@ -14,7 +14,7 @@ export default function Definitions(props) {
       <div className="Definitions">
         <h2>
           <span className="sound" onClick={play}>
-            <i class="fas fa-volume-up"></i>
+            <i className="fas fa-volume-up"></i>
           </span>
           {props.data.word}{" "}
           <span className="phonetic"> {props.data.phonetic}</span>
