@@ -15,7 +15,7 @@ export default function Search() {
     axios.get(apiUrl).then(handleResponse);
     // API DOCS - https://www.pexels.com/api/documentation/
     let pexelsKey = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
-    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}`;
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let header = { Authorization: `Bearer ${pexelsKey}` };
     axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
   }
