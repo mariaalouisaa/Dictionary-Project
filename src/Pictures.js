@@ -6,7 +6,7 @@ export default function Pictures(props) {
     return (
       <section>
         <div className="pic-container">
-          {props.data.map(function (pic, index) {
+          {props.data.map((pic, index) => {
             return (
               <img
                 src={pic.src.landscape}
