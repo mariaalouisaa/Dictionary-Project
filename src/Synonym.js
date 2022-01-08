@@ -1,7 +1,9 @@
 import "./Synonym.css";
 
 export default function Synonym(props) {
-  function searchSynonym() {}
+  function searchSynonym(event) {
+    console.log(event.target.innerHTML);
+  }
 
   if (props.synonyms.length > 0) {
     return (

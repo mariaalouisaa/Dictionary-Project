@@ -2,7 +2,6 @@ import "./Pictures.css";
 
 export default function Pictures(props) {
   if (props.data) {
-    console.log(props.data);
     return (
       <section>
         <div className="pic-container">
