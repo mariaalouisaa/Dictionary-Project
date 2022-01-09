@@ -17,6 +17,11 @@ export default function Search() {
     setSynonym(synonym);
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${synonym}`;
     axios.get(apiUrl).then(handleResponse);
+    //old key = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
+    let pexelsKey = `563492ad6f917000010000012ad078d7f9ad403eb9d6be008686c6b5`;
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${synonym}&per_page=9`;
+    let header = { Authorization: `Bearer ${pexelsKey}` };
+    axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
   }, [synonym]);
 
   function handleSearch(event) {
@@ -25,7 +30,8 @@ export default function Search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
     // API DOCS - https://www.pexels.com/api/documentation/
-    let pexelsKey = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
+    //old key = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
+    let pexelsKey = `563492ad6f917000010000012ad078d7f9ad403eb9d6be008686c6b5`;
     let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let header = { Authorization: `Bearer ${pexelsKey}` };
     axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
@@ -37,16 +43,17 @@ export default function Search() {
 
   function handleResponse(response) {
     setResult(response.data[0]);
+    console.log();
   }
 
-  function updateCity(event) {
+  function updateWord(event) {
     setKeyword(event.target.value);
   }
 
   return (
     <div className="Search">
       <form onSubmit={handleSearch}>
-        <input className="input" type="search" onChange={updateCity} />
+        <input className="input" type="search" onChange={updateWord} />
       </form>
       <Definitions data={result} getSynonym={getSynonym} />
       <Pictures data={photos} />

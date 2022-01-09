@@ -3,7 +3,9 @@ import "./Synonym.css";
 export default function Synonym(props) {
   function searchSynonym(event) {
     let synonym = event.target.innerHTML;
-    props.getSynonym(synonym);
+    if (!synonym.includes(" ")) {
+      props.getSynonym(synonym);
+    } else alert("Word not in our dictonary, please try another");
   }
 
   if (props.synonyms.length > 0) {
