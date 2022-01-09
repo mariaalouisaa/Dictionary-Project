@@ -30,7 +30,10 @@ export default function Definitions(props) {
               <br />
               <Example example={meaning.definitions[0].example} />
               <br />
-              <Synonym synonyms={meaning.definitions[0].synonyms} />
+              <Synonym
+                synonyms={meaning.definitions[0].synonyms}
+                getSynonym={props.getSynonym}
+              />
             </section>
           );
         })}

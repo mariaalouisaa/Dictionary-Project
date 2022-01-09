@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Definitions from "./Definition";
 import "./Search.css";
@@ -8,6 +8,17 @@ export default function Search() {
   const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const [synonym, setSynonym] = useState("");
+  const getSynonym = (value) => {
+    setSynonym(value);
+  };
+
+  useEffect(() => {
+    setSynonym(synonym);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${synonym}`;
+    axios.get(apiUrl).then(handleResponse);
+  }, [synonym]);
+
   function handleSearch(event) {
     event.preventDefault();
     // API Documentation - https://dictionaryapi.dev/
@@ -37,7 +48,7 @@ export default function Search() {
       <form onSubmit={handleSearch}>
         <input className="input" type="search" onChange={updateCity} />
       </form>
-      <Definitions data={result} />
+      <Definitions data={result} getSynonym={getSynonym} />
       <Pictures data={photos} />
     </div>
   );
