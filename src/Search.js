@@ -43,7 +43,7 @@ export default function Search() {
 
   function handleResponse(response) {
     setResult(response.data[0]);
-    console.log();
+    console.log(response);
   }
 
   function updateWord(event) {
