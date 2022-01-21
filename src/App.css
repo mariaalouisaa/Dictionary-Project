@@ -1,11 +1,11 @@
 body {
   margin: 0;
+  background-color: rgb(131, 213, 216, 0.1);
 }
 .App {
   font-family: "Roboto", sans-serif;
   padding: 6em 4em 0 4em;
   margin: 0 auto;
-  background-color: rgb(131, 213, 216, 0.1);
   max-width: 70em;
 }
 
