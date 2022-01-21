@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# React Disctionary App
+
+Made using API's from [Free Dictionary API](https://dictionaryapi.dev/) and [Pexels](https://www.pexels.com/api/)
+
+- User can search millions of words and data will be extracted from the API.
+- Response for the user includes definition, example, synonyms and images.
+- Synonyms  trigger and new search (new API call) onClick.
+- Page is fully responsive.
+
+<img width="642" alt="dictionary" src="https://user-images.githubusercontent.com/82417131/150445807-a91b86be-2a43-4a95-9a19-13b02cd07877.png">
+
+Site hosted on [Netflify](https://practical-poincare-037e95.netlify.app/)
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
