@@ -10,7 +10,6 @@ function App() {
         Open source code on{" "}
         <a
           href="https://github.com/mariaalouisaa/Dictionary-Project"
-          target="_blank"
           rel="noreferrer"
         >
           GitHub
@@ -18,7 +17,6 @@ function App() {
         , site hosted on{" "}
         <a
           href="https://practical-poincare-037e95.netlify.app"
-          target="_blank"
           rel="noreferrer"
         >
           Netlify.

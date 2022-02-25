@@ -13,9 +13,9 @@ export default function Definitions(props) {
     return (
       <div className="Definitions">
         <h2>
-          <span className="sound" onClick={play}>
-            <i className="fas fa-volume-up"></i>
-          </span>
+          <button className="sound" onClick={play}>
+            <span className="fas fa-volume-up"></span>
+          </button>
           {props.data.word}{" "}
           <span className="phonetic"> {props.data.phonetic}</span>
         </h2>

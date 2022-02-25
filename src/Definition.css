@@ -46,3 +46,8 @@ h2 {
 .holder {
   height: 50vh;
 }
+
+:focus {
+  color: crimson;
+  border: crimson solid 2px;
+}
