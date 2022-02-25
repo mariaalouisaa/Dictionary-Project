@@ -23,6 +23,11 @@ a {
 }
 
 h1 {
-  margin-left: 10px;
+  margin: auto auto 10px 10px;
   font-size: 36px;
+}
+
+:focus {
+  color: crimson;
+  border: crimson solid 2px;
 }

@@ -6,7 +6,7 @@ export default function Synonym(props) {
     props.getSynonym(synonym);
   }
 
-  if (props.synonyms.length > 0) {
+  if (props.synonyms) {
     return (
       <div className="Synonym">
         {props.synonyms.map((word, index) => {

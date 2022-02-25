@@ -43,7 +43,6 @@ export default function Search() {
 
   function handleResponse(response) {
     setResult(response.data[0]);
-    console.log(response);
   }
 
   function updateWord(event) {
@@ -53,7 +52,15 @@ export default function Search() {
   return (
     <div className="Search">
       <form onSubmit={handleSearch}>
-        <input className="input" type="search" onChange={updateWord} />
+        <label className="formlabel">
+          What word do you want to look up?
+          <input
+            className="input"
+            type="search"
+            name="search"
+            onChange={updateWord}
+          />
+        </label>
       </form>
       <Definitions data={result} getSynonym={getSynonym} />
       <Pictures data={photos} />
