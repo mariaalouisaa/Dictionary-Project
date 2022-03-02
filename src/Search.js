@@ -5,23 +5,25 @@ import "./Search.css";
 import Pictures from "./Pictures";
 
 export default function Search() {
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState(null);
   const [result, setResult] = useState(null);
   const [photos, setPhotos] = useState(null);
-  const [synonym, setSynonym] = useState("");
+  const [synonym, setSynonym] = useState(null);
   const getSynonym = (value) => {
     setSynonym(value);
   };
 
   useEffect(() => {
-    setSynonym(synonym);
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${synonym}`;
-    axios.get(apiUrl).then(handleResponse);
-    //old key = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
-    let pexelsKey = `563492ad6f917000010000012ad078d7f9ad403eb9d6be008686c6b5`;
-    let pexelsUrl = `https://api.pexels.com/v1/search?query=${synonym}&per_page=9`;
-    let header = { Authorization: `Bearer ${pexelsKey}` };
-    axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
+    if (synonym) {
+      setSynonym(synonym);
+      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${synonym}`;
+      axios.get(apiUrl).then(handleResponse);
+      //old key = `563492ad6f9170000100000136d956a9f87e49358e0570bce489ddd4`;
+      let pexelsKey = `563492ad6f917000010000012ad078d7f9ad403eb9d6be008686c6b5`;
+      let pexelsUrl = `https://api.pexels.com/v1/search?query=${synonym}&per_page=9`;
+      let header = { Authorization: `Bearer ${pexelsKey}` };
+      axios.get(pexelsUrl, { headers: header }).then(handlePexelsResponse);
+    }
   }, [synonym]);
 
   function handleSearch(event) {
