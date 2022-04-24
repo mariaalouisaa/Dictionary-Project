@@ -1,12 +1,13 @@
 # React Disctionary App
 
-Made using datafrom from [Free Dictionary API](https://dictionaryapi.dev/) and [Pexels API](https://www.pexels.com/api/)
+Made using data from from [Free Dictionary API](https://dictionaryapi.dev/) and [Pexels API](https://www.pexels.com/api/)
 
 - User can search millions of words and data will be fetched from the API.
 - Response for the user includes definition, example, synonyms and images.
 - Synonyms  trigger and new search (new API call) onClick.
 - Page is fully responsive.
 - Axios.js used for GET request.
+- react-create-app used to compile react files
 
 <img width="642" alt="dictionary" src="https://user-images.githubusercontent.com/82417131/150445807-a91b86be-2a43-4a95-9a19-13b02cd07877.png">
 
